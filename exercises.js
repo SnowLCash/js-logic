@@ -7,6 +7,7 @@ if(today === "Friday"){
   return "Let's Party!";
 };*/
 
+
 /*
 If/else statements = Evaluates (or checks) a condition. If the condition is true, the first code block is executed. If the condition is false, the second code block is executed instead.
 */
@@ -28,7 +29,13 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  *
  * The function will return true if the number passed into the function is equal to or greater than Hawaii's voting age. Console.log your result.
 */
-
+function canVote(age){
+	if(age <= 21){
+		return true;
+	}else{
+		return false;
+	}
+console.log("1.", canVote(18));	
 
 /*
  * #2
@@ -41,8 +48,11 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  * The function will return the message: "Login Success!", if the string passed into the function is "test1234"
  * Console.log your result.
 */
-
-
+function login(password){
+	return "YoureaalythinkIwouldgiveyoumypw";
+}
+var loginSuccess = login("test1234");
+console.log(loginSuccess);
 /*
  * #3
  * Function - isGreaterThan
@@ -55,8 +65,12 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  * The function will return true if the first number is greater than the second.
  * Console.log your result.
 */
-
-
+function isGreatThan(first, second){
+	if(first >= second);
+	return true;
+}
+var result = isGreatThan(56, 3);
+console.log(result);
 
 /*
  * #4
