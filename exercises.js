@@ -30,13 +30,13 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  * The function will return true if the number passed into the function is equal to or greater than Hawaii's voting age. Console.log your result.
 */
 function canVote(age){
-	if(age <= 21){
+	if(age >= 18){
 		return true;
 	}else{
 		return false;
 	}
-console.log("1.", canVote(18));	
-
+}
+console.log("1:Canvote:", canVote(19));
 /*
  * #2
  * Function - login
@@ -49,10 +49,11 @@ console.log("1.", canVote(18));
  * Console.log your result.
 */
 function login(password){
-	return "YoureaalythinkIwouldgiveyoumypw";
+	if(password === "test1234"){
+		return "Login Success!";
+	}
 }
-var loginSuccess = login("test1234");
-console.log(loginSuccess);
+console.log(login("test1234"));
 /*
  * #3
  * Function - isGreaterThan
@@ -65,13 +66,14 @@ console.log(loginSuccess);
  * The function will return true if the first number is greater than the second.
  * Console.log your result.
 */
-function isGreatThan(first, second){
-	if(first >= second);
-	return true;
+function isGreaterThan(first, second){
+	if(first >= second){
+		return true;
+	}else{
+		return false;
+	}
 }
-var result = isGreatThan(56, 3);
-console.log(result);
-
+console.log(isGreaterThan(78, 15));
 /*
  * #4
  * Function - mustBeTrue
@@ -83,7 +85,14 @@ console.log(result);
  * The function will return true if the value passed into the function is "true".
  * Console.log your result.
 */
-
+function mustBeTrue(boo){
+	if(boo === true){
+		return true;
+	}else{
+		return false;
+	}
+}
+console.log("Must Be True:", mustBeTrue(true));
 
 
 /*
@@ -97,8 +106,12 @@ console.log(result);
  * The function will return the message "Word to Big Bird!", if the string passed into the function is a three-letter word. 
  * Console.log your result.
 */
-
-
+function bigBird(word){
+	if(word.length === 3){
+		return "Word to Big Bird!";
+	}
+}
+console.log("Big Bird:", bigBird("bat"));
 
 /*
  * #6
@@ -112,7 +125,14 @@ console.log(result);
  * If the strings are equal, the function will return the message "You look mahvelous!" Otherwise, return the message: "I don't know who you are anymore." 
  * Console.log your result.
 */
-
+function isEqual(first, second){
+	if(first === second){
+		return "You look mahvelous!";
+	}else{
+		return "I don't know you anymore."
+	}
+}
+console.log("Equality:", isEqual(54, 54));
 
 /*
  * #7
@@ -126,8 +146,14 @@ console.log(result);
  * If the strings are not equal, the function will return the message "Opposites do attract." Otherwise, return the message: "Cause it's like you're my mirror." 
  * Console.log your result.
 */
-
-
+function notEqual(first, second){
+	if(first != second){
+		return "Opposites do attract.";
+	}else{
+		return "Cause it's like you're my mirror.";
+	}
+}
+console.log(notEqual("Calm", "calm"));
 /*
  * #8
  * Function - spareChange
@@ -139,8 +165,14 @@ console.log(result);
  * The function will return true if the number passed into the function is greater than 100, otherwise it will return false.
  * Console.log your result.
 */ 
-
-
+function spareChange(money){
+	if(money > 100){
+		return true;
+	}else{
+		return false;
+	}
+}
+console.log("Change", spareChange(60));
 
 /*
  * #9
@@ -155,8 +187,15 @@ console.log(result);
  * The function will return true if the sum of all the number values is greater than 30, otherwise it will return false.
  * Console.log your result.
 */ 
-
-
+function dirty30(one, two, three){
+	var sum = one + two + three;
+	if(sum > 30){
+		return true;
+		}else{
+			return false;
+		}
+	}
+console.log("filthy:", dirty30(4, 65, 12));
 
 /*
  * #10
@@ -169,8 +208,14 @@ console.log(result);
  * The function will return true if the number passed in is an even integer, otherwise it will return false.
  * Console.log your result.
 */ 
-
-
+function evenStevens(num){
+	if(num%2 === 0){
+		return true;
+	}else{
+		return false;
+	}
+}
+console.log("Steven:", evenStevens(79));
 
 
 /*
@@ -185,8 +230,14 @@ console.log(result);
  * If BOTH values are 21 or over, the function will return the message: "Welcome to the Legends Lounge." Otherwise, it will return the message: "Chuck E Cheese is across the street."
  * Console.log your result.
 */ 
-
-
+function daClub(cover, age){
+	if(cover >= 21 && age >= 21){
+		return "Welcome to Venus!";
+	}else{
+		return "Be in the Kiddy Pond!";
+	}
+}
+console.log("DaClub:", daClub(16, 24));
 /*
  * #12
  * Function - graduation
@@ -199,8 +250,14 @@ console.log(result);
  * If EITHER the number value is greater than or equal to 120 or the boolean value is true, then the function will return the message: "Congratulations on a job well done." Otherwise, return the message: "See you in summer school."
  * Console.log your result.
 */ 
-
-
+function graduation(credits, thesis){
+	if(credits >= 120 || thesis >= 120){
+		return "Congratulations on surviving high school!";
+	}else{
+		return "I'm so disappointed in you!";
+	}
+}
+console.log("All the times you remember:", graduation(150, 120));
 
 /*
  * #13
@@ -213,8 +270,16 @@ console.log(result);
  * The function will return the message: "You are riding Honolulu's Rail.", if the number value is less than 50, otherwise it will return the message: "You are riding an Amtrak.", if the number value is less than 100, and return the message: "Now you ballin' in the Shinkansen!", if the number value is greater than or equal to 100.
  * Console.log your result.
 */ 
-
-
+function moneyTrain(speed){
+	if(speed < 50){
+		return "Welcome to Honolulu!";
+	}else if(speed < 100){
+		return "Welcome to Amtrak!";
+	}else{
+		return "Welcome to Tokyoville!";
+	}
+}
+console.log("Train Money:", moneyTrain(68));
 /*
  * #14
  * Function - buyDoughnut
