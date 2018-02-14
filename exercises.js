@@ -129,7 +129,7 @@ function isEqual(first, second){
 	if(first === second){
 		return "You look mahvelous!";
 	}else{
-		return "I don't know you anymore."
+		return "I don't know you anymore.";
 	}
 }
 console.log("Equality:", isEqual(54, 54));
@@ -324,9 +324,11 @@ The for loop is made up for 3 parts:
 
 var toyotaModels = ["Corolla", "Prius", "4 Runner", "Camry", "Land Cruiser"];
 
-for (var i = 0; i<toyotaModels.length; i++){
-   console.log("Toyota " + toyotaModels[i]);
+for(var i = 0; i<toyotaModels.length; i++){
+	console.log("Toyota:", toyotaModels);
 }
+
+
 
 
 /* 
@@ -337,10 +339,12 @@ for (var i = 0; i<toyotaModels.length; i++){
  * "Player: 3"
  * "Player: 4"
  * "Player: 5"
-*/
-for(var i = 1; i<=5; i++){
-	console.log("player", i);
+ */
+for(var i = 0; i<=5; i++){
+	console.log("Players:", i);
 }
+
+
 
 /* 
  * #16 
@@ -349,8 +353,10 @@ for(var i = 1; i<=5; i++){
   var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
 
   for(var i = 0; i<myFavFoods.length; i++){
-  console.log(myFavFoods[i]);
-}
+  	console.log("Food:", myFavFoods[i]);
+  }
+
+  
 
 
 /*
@@ -367,17 +373,17 @@ for(var i = 1; i<=5; i++){
  * The function will loop through and add up all the values in the array that is passed into the function and return the total.
  * Console.log your result.
 */
-var numArray = [2, 4, 6, 8, 10];
+var numArray = [4, 5, 6, 7, 8];
 
 function sumItUp(arr){
-	var total = 0;
+	var total =0;
 	for(var i = 0; i<arr.length; i++){
-		console.log(arr[i])
+		console.log(arr[i]);
 		total += arr[i];
-	}
-	return total;
 }
-console.log("sumItUp:", sumItUp(numArray));
+		return total;
+}
+console.log("Sumitup:", sumItUp(numArray));
 
 /*
  * #18
@@ -397,8 +403,8 @@ var west = [];
 
 function allStars(ballers){
 	for(var i = 0; i<ballers.length; i++){
-		console.log(ballers[i]);
-		if(i%2 === 0){
+		console.log(i);
+		if(i%2 ===0){
 			east.push(ballers[i]);
 		}else{
 			west.push(ballers[i]);
@@ -421,18 +427,20 @@ console.log("West:", west);
 */ 
 
   var subOfTheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
+
   function subways(special){
   	for(var i = 0; i<special.length; i++){
   		if(i%2 ===1){
   			console.log(i);
-  			special.splice(i, 1, "Classic Tuna");
-  			special[i] = "Classic Tuna";
+  			special.splice(i, 1,  "Classin Tuna");
+  			special[i] = "Classin Tuna";
   		}
   	}
-  	return special
+  	return special;
   }
-subways(subOfTheDay);
-console.log(subOfTheDay);
+  subways(subOfTheDay);
+  console.log(subOfTheDay);
+  
 
 /*
 Final Boss
@@ -450,15 +458,17 @@ var phrase = "An apple a day keeps Alice feeling awesome!";
 
 function removeLetter(str){
 	var newArr = [];
-	for(var i = 0; i<str.length; i++){
+	for(var i =0; i<str.length; i++){
 		console.log(str[i]);
-		if(str[i] !== 'a' && str[i] !== 'A'){
-}
+		if(str !== 'a' && str !== 'A'){
+			newArr.push(str[i]);
+		}
 	}
 	console.log(newArr);
 	return newArr;
 }
- removeLetter(phrase);
+removeLetter(phrase);
+
   
   
 
